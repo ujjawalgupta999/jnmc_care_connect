@@ -183,6 +183,44 @@ Public health-check endpoints providing:
 
 ---
 
+### 🔑 Environment Variables Configuration
+
+Create a `.env` file in the root of your `backend` directory and populate it with the following environment variables:
+
+```env
+# Server Configuration
+PORT=5000
+FRONTEND_URL=http://localhost:3000
+
+# Database Configuration (MongoDB Atlas Connection String)
+MONGO_URL=mongodb+srv://<username>:<password>@cluster0.xxxx.mongodb.net/jnmc?retryWrites=true&w=majority
+
+# Security & Authentication (JWT)
+JWT_SECRET=your_super_secret_jwt_key_here
+
+# Initial Hardcoded Admin Credentials (Auto-created on first server startup)
+ADMIN_EMAIL=admin@example.com
+ADMIN_PASSWORD=your_secure_admin_password
+
+# Razorpay API Credentials
+RAZORPAY_KEY_ID=rzp_test_your_key_id_here
+RAZORPAY_KEY_SECRET=your_key_secret_here
+
+# Cloudflare R2 Configuration (S3-Compatible Object Storage)
+CLOUDFLARE_ACCOUNT_ID=your_cloudflare_account_id_here
+R2_ACCESS_KEY_ID=your_r2_access_key_id_here
+R2_SECRET_ACCESS_KEY=your_r2_secret_access_key_here
+R2_BUCKET_NAME=jnmc
+R2_PUBLIC_DEV_URL=[https://pub-your-bucket-id.r2.dev](https://pub-your-bucket-id.r2.dev)
+
+# Cloudinary Configuration (Profile & Images)
+CLOUDINARY_CLOUD_NAME=your_cloud_name_here
+CLOUDINARY_API_KEY=your_api_key_here
+CLOUDINARY_API_SECRET=your_api_secret_here
+
+# Google Gemini AI API Configuration
+GEMINI_API_KEY=your_google_gemini_api_key_here
+```
 
 ## 🚀 Installation & Setup
 
@@ -212,4 +250,4 @@ npm run dev
 ```
 
 Website runs on:  
-`http://localhost:5173`
+` http://localhost:3000`
